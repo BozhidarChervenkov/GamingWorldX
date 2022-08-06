@@ -5,6 +5,8 @@ const Login = () => {
 
             <h1>Login:</h1>
 
+                <hr/>
+
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">
                         Email address
@@ -27,6 +29,8 @@ const Login = () => {
                         id="exampleInputPassword1"
                     />
                 </div>
+
+                <hr/>
 
                 <button type="submit" className="btn btn-primary mt-5">
                     Submit

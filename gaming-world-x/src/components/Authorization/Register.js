@@ -5,6 +5,8 @@ const Register = () => {
 
             <h1>Register:</h1>
 
+            <hr/>
+
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">
                         Email address
@@ -39,6 +41,8 @@ const Register = () => {
                     />
                 </div>
 
+                <hr/>
+                
                 <button type="submit" className="btn btn-primary mt-5">
                     Submit
                 </button>
