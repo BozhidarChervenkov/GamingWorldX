@@ -40,8 +40,6 @@ const Login = () => {
                         type="email"
                         name="email"
                         className="form-control"
-                        id="exampleInputEmail1"
-                        aria-describedby="emailHelp"
                     />
                 </div>
 
@@ -53,7 +51,6 @@ const Login = () => {
                         type="password"
                         name="password"
                         className="form-control"
-                        id="exampleInputPassword1"
                     />
                 </div>
 

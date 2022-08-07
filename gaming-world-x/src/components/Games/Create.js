@@ -1,66 +1,59 @@
-import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import * as authService from '../../services/authService';
-import { AuthContext } from '../../contexts/AuthContext';
-
-const Register = () => {
-    const { userLogin } = useContext(AuthContext);
-    const navigate = useNavigate();
-
+const Create = () => {
     const onSubmit = (e) => {
         e.preventDefault();
 
-        const { email, password, confirmPassword } = Object.fromEntries(new FormData(e.target));
+        const {title, description, price, imageUrl} = Object.fromEntries(new FormData(e.target));
 
-        if (password !== confirmPassword) {
-            return;
-        }
-
-        authService.register(email, password)
-            .then(authData => {
-                userLogin(authData);
-                navigate('/');
-            });
-    };
+        console.log(title, description, price, imageUrl);
+    }
 
     return (
         <form className="offset-4 col-md-14 mt-5" onSubmit={onSubmit}>
             <div className="row col-md-6">
 
-                <h1>Register:</h1>
+                <h1>Add new game:</h1>
 
                 <hr />
 
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">
-                        Email address
+                        Title
                     </label>
                     <input
-                        type="email"
-                        name="email"
+                        type="text"
+                        name="title"
                         className="form-control"
                     />
                 </div>
 
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">
-                        Password
+                        Description
                     </label>
                     <input
-                        type="password"
-                        name="password"
+                        type="text"
+                        name="description"
                         className="form-control"
                     />
                 </div>
 
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">
-                        Confirm Password
+                        Price
                     </label>
                     <input
-                        type="password"
-                        name="confirmPassword"
+                        type="text"
+                        name="price"
+                        className="form-control"
+                    />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">
+                        ImageUrl
+                    </label>
+                    <input
+                        type="text"
+                        name="imageUrl"
                         className="form-control"
                     />
                 </div>
@@ -75,4 +68,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default Create;
