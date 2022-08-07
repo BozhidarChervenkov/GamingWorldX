@@ -1,11 +1,21 @@
+import { useContext } from 'react';
+
+import { GameContext } from '../../contexts/GameContext';
+import * as gameService from '../../services/gameService';
+
 const Create = () => {
+    const { gameAdd } = useContext(GameContext);
+
     const onSubmit = (e) => {
         e.preventDefault();
+        
+        const { title, description, price, imageUrl } = Object.fromEntries(new FormData(e.target));
 
-        const {title, description, price, imageUrl} = Object.fromEntries(new FormData(e.target));
-
-        console.log(title, description, price, imageUrl);
-    }
+        gameService.create({ title, description, price, imageUrl })
+            .then(result => {
+                gameAdd(result);
+            });
+    };
 
     return (
         <form className="offset-4 col-md-14 mt-5" onSubmit={onSubmit}>

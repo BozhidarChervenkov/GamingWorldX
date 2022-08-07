@@ -8,7 +8,7 @@ const Home = () => {
             <hr />
 
             <div>
-                <img src="https://greyring.com/wp-content/uploads/2021/09/future-gaming.jpg" width={800} height={100} className="img-fluid mt-1" />
+                <img src="https://greyring.com/wp-content/uploads/2021/09/future-gaming.jpg" width={800} height={100} className="img-fluid mt-1" alt="gamingImage"/>
             </div>
 
             <hr />
