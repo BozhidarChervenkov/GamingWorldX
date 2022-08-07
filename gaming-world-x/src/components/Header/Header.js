@@ -40,7 +40,7 @@ const Header = () => {
                                 All Games
                             </Link>
                         </li>
-                        {user
+                        {user.email
                             ?
                             <>
                             <li className="nav-item">
