@@ -2,16 +2,27 @@ import { useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 import { AuthContext } from "../../contexts/AuthContext";
+import { useNavigate } from 'react-router-dom';
+
 import { GameContext } from '../../contexts/GameContext';
+import * as gameService from '../../services/gameService';
 
 const GameById = () => {
+    const navigate = useNavigate();
     const { user } = useContext(AuthContext);
     const { gameId } = useParams();
-    const { games } = useContext(GameContext);
+    const { games, gameRemove } = useContext(GameContext);
 
-    console.log(user._id);
     const game = games.find(g => g._id === gameId) || {};
     const isAuthor = game._ownerId === user._id;
+
+    const gameDeleteHandler = () => {
+        gameService.delGame(gameId)
+            .then(() => {
+                gameRemove(gameId);
+                navigate('/');
+            });
+    };
 
     return (
         <div className="justify-content-center mb-5 col-md-8 offset-2">
@@ -31,9 +42,9 @@ const GameById = () => {
                     <Link to={`/game/edit/${gameId}`} className="btn btn-success mb-2">
                         Edit
                     </Link>
-                    <Link to={`/game/delete/${gameId}`} className="btn btn-danger">
+                    <button onClick={gameDeleteHandler} className="btn btn-danger">
                         Delete
-                    </Link>
+                    </button>
                 </div>
             }
             <hr />

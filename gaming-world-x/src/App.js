@@ -38,6 +38,13 @@ function App() {
 		navigate('/catalog');
 	};
 
+	const gameRemove = (gameId) => {
+		setGames(state => {
+			var gamesWithoutDeleted = state.filter(g => g._id !== gameId)
+			return gamesWithoutDeleted;
+		});
+	};
+
 	useEffect(() => {
 		gameService.getAll()
 			.then(result => {
@@ -51,7 +58,7 @@ function App() {
 			<div className="App">
 				<Header />
 
-				<GameContext.Provider value={{ games, gameAdd }}>
+				<GameContext.Provider value={{ games, gameAdd, gameRemove }}>
 					<Routes>
 						<Route path="/" element={<Home games={games} />} />
 						<Route path="/register" element={<Register />} />
