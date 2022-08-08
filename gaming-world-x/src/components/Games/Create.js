@@ -1,9 +1,11 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { GameContext } from '../../contexts/GameContext';
 import * as gameService from '../../services/gameService';
 
 const Create = () => {
+    const navigate = useNavigate();
     const { gameAdd } = useContext(GameContext);
 
     const onSubmit = (e) => {
@@ -14,6 +16,7 @@ const Create = () => {
         gameService.create({ title, description, price, imageUrl })
             .then(result => {
                 gameAdd(result);
+                navigate('/');
             });
     };
 

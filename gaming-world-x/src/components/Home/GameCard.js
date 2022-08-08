@@ -10,7 +10,7 @@ const GameCard = ({ game }) => {
                     <span className="row">{game.description}</span>
                     <span className="row">{game.price}$</span>
                 </p>
-                <Link to="#" className="btn btn-primary">
+                <Link to={`games/${game._id}`} className="btn btn-primary">
                     Details
                 </Link>
             </div>

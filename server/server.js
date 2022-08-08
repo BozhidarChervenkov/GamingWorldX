@@ -1336,11 +1336,11 @@
         games: {
             "ff436770-76c5-40e2-b231-77409eda7a61": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "CoverFire",
+                "title": "Star Wars Battlefront II",
                 "category": "Action",
                 "price": "80",
-                "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1763740/capsule_616x353.jpg?t=1636013358",
-                "description": "Best action shooter game, easy controls, realistic 3D graphics and fun offline missions. Get your best shooting gun and take to action!",
+                "imageUrl": "https://media.contentapi.ea.com/content/dam/walrus/en-us/migrated-images/2017/04/reveal-swbf2-fb-meta-image-alt.png.adapt.crop16x9.1023w.png",
+                "description": "Star Wars™ Battlefront™ is the ultimate Star Wars battle experience, brought to life by the creators of Battlefield. Fight in epic Star Wars battles on iconic planets and rise through the ranks playing as the heroic Rebellion or the evil Galactic Empire.",
                 "_createdOn": 1617194128618,
             },
             "1840a313-225c-416a-817a-9954d4609f7c": {
@@ -1353,14 +1353,42 @@
                 "_createdOn": 1617194210928,
             },
             "126777f5-3277-42ad-b874-76d043b069cb": {
-                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                "title": "Zombie Lang",
-                "category": "Vertical Shooter",
-                "price": "45",
-                "imageUrl": "https://mkt-web.gameloft.com/static/374862b9c2eea85046807028ae228679.jpg",
-                "description": "With it’s own unique story, set between the events of the first movie, Zombieland: Double Tap- Road Trip is a ridiculously fun top-down twin-stick shooter featuring local co-op multiplayer for up to four players. Play as your favorite heroes from the original — Tallahassee, Columbus, Wichita and Little Rock — as well as new unlockable characters from the upcoming sequel.  The game embraces the game-like elements seen in the film by  incorporating everything from the “Rules” to “Zombie Kill of the Week”.  Use your special abilities, an arsenal of weapons and the essential Zombieland rules for survival to stay alive against huge numbers of uniquely grotesque and dangerous undead monstrosities in Zombieland: Double Tap- Road Trip’s story-based campaign mode, wave-based horde mode, and boss battles.",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "Stray",
+                "category": "Adventure",
+                "price": "69",
+                "imageUrl": "https://1upinfinite.com/wp-content/uploads/2022/07/VzdYBmqDZ9JaYwakekLRY3.jpg",
+                "description": "Lost, alone and separated from family, a stray cat must untangle an ancient mystery to escape a long-forgotten city. Stray is a third-person cat adventure game set amidst the detailed, neon-lit alleys of a decaying cybercity and the murky environments of its seedy underbelly.",
                 "_createdOn": 1617194295474,
-            }
+            },
+            "676777f5-3347-42ad-b874-76d056b069cb": {
+                "_ownerId": "6cf590a3-5330-431e-b9bc-e4f88e72a799",
+                "title": "Horizon zero dawn",
+                "category": "Adventure",
+                "price": "400",
+                "imageUrl": "https://www.guerrilla-games.com/media/Games/Horizon/horizon-zero-dawn-card-image-v2-768w.jpg?width=1024&height=768&rmode=max&token=rTfdzWvuKaEG7aO5yUx8UtnxUk49k6vVe5w3dL4jsKw%3D",
+                "description": "Horizon Zero Dawn is a 2017 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment. The plot follows Aloy, a young huntress in a world overrun by machines, who sets out to uncover her past.",
+                "_createdOn": 1617194295474,
+            },
+            "985777f5-3347-42ad-b874-76d056b069cb": {
+                "_ownerId": "6cf590a3-5330-431e-b9bc-e4f88e72a799",
+                "title": "Gears of war",
+                "category": "Action",
+                "price": "300",
+                "imageUrl": "https://www.guerrilla-games.com/media/Games/Horizon/horizon-zero-dawn-card-image-v2-768w.jpg?width=1024&height=768&rmode=max&token=rTfdzWvuKaEG7aO5yUx8UtnxUk49k6vVe5w3dL4jsKw%3D",
+                "description": "The game follows protagonist Marcus Fenix, a soldier in the Coalition of Ordered Governments tasked to lead a last-ditch effort to destroy the Locust Horde and save humanity.",
+                "_createdOn": 1617194295474,
+            },
+            "500777f5-3347-42ad-b874-76d056b069cb": {
+                "_ownerId": "6cf590a3-5330-431e-b9bc-e4f88e72a799",
+                "title": "Colin McRae: DiRT 2",
+                "category": "Racing",
+                "price": "250",
+                "imageUrl": "https://m.media-amazon.com/images/I/718E3dqa02L.jpg",
+                "description": "The game follows protagonist Marcus Fenix, a soldier in the Coalition of Ordered Governments tasked to lead a last-ditch effort to destroy the Locust Horde and save humanity.",
+                "_createdOn": 1617194295474,
+            },
+
         },
         comments: {
         
