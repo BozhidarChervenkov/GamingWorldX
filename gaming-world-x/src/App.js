@@ -7,6 +7,7 @@ import Register from './components/Authorization/Register';
 import Login from './components/Authorization/Login';
 import Logout from './components/Authorization/Logout';
 import Create from './components/Games/Create';
+import All from './components/Games/All';
 import { AuthContext } from './contexts/AuthContext';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { GameContext } from './contexts/GameContext';
@@ -39,7 +40,7 @@ function App() {
 	useEffect(() => {
 		gameService.getAll()
 			.then(result => {
-				result = result.sort(g=>g._createdOn).slice(0, 4);
+				result = result.sort(g => g._createdOn).slice(0, 4);
 				setGames(result);
 			});
 	}, []);
@@ -57,7 +58,7 @@ function App() {
 						<Route path="/logout" element={<Logout />} />
 						<Route path="/create" element={<Create />} />
 						<Route path="/catalog" element={<h1>Catalog page</h1>} />
-						<Route path="/games/all" element={<h1>All games page</h1>} />
+						<Route path="/games/all" element={<All />} />
 					</Routes>
 				</GameContext.Provider>
 			</div>
