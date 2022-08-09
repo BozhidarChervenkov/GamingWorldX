@@ -25,7 +25,7 @@ const GameById = () => {
     };
 
     return (
-        <div className="justify-content-center mb-5 col-md-8 offset-2">
+        <div className="justify-content-center left mb-5 col-md-8 offset-2">
             <hr />
             <h2>
                 <strong>{game.title}</strong>

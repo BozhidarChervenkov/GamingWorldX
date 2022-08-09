@@ -68,7 +68,7 @@ const Register = () => {
                 <hr />
 
                 <button type="submit" className="btn btn-primary mt-5">
-                    Submit
+                    Register
                 </button>
             </div>
         </form>

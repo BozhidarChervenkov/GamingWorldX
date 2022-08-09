@@ -10,9 +10,6 @@ const GameListItem = ({ game }) => {
             <p>
                 <strong>Description:</strong> {game.description}
             </p>
-            <p>
-                <strong>Price: </strong> {game.price}$
-            </p>
             <div className="row col-md-2 offset-5">
                 <Link to={`/games/${game._id}`} className="btn btn-warning mb-2">
                     Details

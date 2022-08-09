@@ -57,7 +57,7 @@ const Login = () => {
                 <hr />
 
                 <button type="submit" className="btn btn-primary mt-5">
-                    Submit
+                    Log in
                 </button>
             </div>
         </form>

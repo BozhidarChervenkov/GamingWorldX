@@ -7,63 +7,57 @@ const Navigation = () => {
     const { user } = useContext(AuthContext);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container-fluid">
-                <Link className="navbar-brand" to="/">
-                    GamingWorldX
-                </Link>
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon" />
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <nav className="navbar container-fluid navbar-expand-lg navbar-dark bg-dark">
+            <Link className="navbar-brand" to="/">
+                GamingWorldX
+            </Link>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li className="nav-item">
+                        <Link className="nav-link" aria-current="page" to="/">
+                            Home
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/games/all">
+                            All Games
+                        </Link>
+                    </li>
+                    {user.email ?
                         <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/">
-                                Home
+                            <Link className="nav-link mr-5" to="/create">
+                                Create
                             </Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/games/all">
-                                All Games
-                            </Link>
-                        </li>
-                        {user.email
-                            ?
-                            <>
+                        : null
+                    }
+                </ul>
+
+                <ul className="navbar-nav ml-auto">
+                    {user.email
+                        ?
+                        <>
+                            <p className="nav-link">Hello, {user.email}!</p>
                             <li className="nav-item">
-                                <Link className="nav-link mr-5" to="/create">
-                                    Create
+                                <Link className="nav-link" to="/logout">
+                                    Logout
                                 </Link>
                             </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/logout">
-                                        Logout
-                                    </Link>
-                                </li>
-                            </>
-                            : <>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/login">
-                                        Login
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/register">
-                                        Register
-                                    </Link>
-                                </li>
-                            </>
-                        }
-                    </ul>
-                </div>
+                        </>
+                        : <>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/login">
+                                    Login
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/register">
+                                    Register
+                                </Link>
+                            </li>
+                        </>
+                    }
+                </ul>
             </div>
         </nav >
     );

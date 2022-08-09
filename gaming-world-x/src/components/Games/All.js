@@ -39,6 +39,7 @@ const All = () => {
                     } else if (game.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                         return game;
                     }
+                    return null;
                 }).map(g => <GameListItem key={g._id} game={g} />)
                 : <p>No games available!</p>
             }
