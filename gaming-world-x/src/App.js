@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
 import Home from "./components/Home/Home";
-import Header from './components/Header/Header';
+import Navigation from './components/Navigation/Navigation';
 import Register from './components/Authorization/Register';
 import Login from './components/Authorization/Login';
 import Logout from './components/Authorization/Logout';
@@ -72,7 +72,7 @@ function App() {
 	return (
 		<AuthContext.Provider value={{ user: auth, userLogin, userLogout }}>
 			<div className="App">
-				<Header />
+				<Navigation />
 
 				<GameContext.Provider value={{ games, gameAdd, gameEdit, gameRemove }}>
 					<Routes>
