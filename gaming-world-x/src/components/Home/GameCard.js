@@ -7,8 +7,7 @@ const GameCard = ({ game }) => {
             <img src={game.imageUrl} style={{ width: "16rem", height: "15rem"}} className="card-img-top" alt={game.title} />
             <div className="card-body">
                 <p className="card-text">
-                    <span className="row">{game.description}</span>
-                    <span className="row">{game.price}$</span>
+                    <span className="row justify-content-center">{game.price}$</span>
                 </p>
                 <Link to={`games/${game._id}`} className="btn btn-primary">
                     Details

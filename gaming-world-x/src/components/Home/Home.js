@@ -19,7 +19,7 @@ const Home = ({ games }) => {
 
             <div className='row ml-5 justify-content-center'>
                 {games.length > 0
-                    ? games.map(x => <GameCard key={x._id} game={x} />)
+                    ? games.map(g => <GameCard key={g._id} game={g} />)
                     : <p className="no-articles">No games yet</p>
                 }
             </div>

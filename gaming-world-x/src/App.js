@@ -9,6 +9,8 @@ import Logout from './components/Authorization/Logout';
 import Create from './components/Games/Create';
 import All from './components/Games/All';
 import GameById from './components/Games/GameById';
+import Edit from './components/Games/Edit';
+
 import { AuthContext } from './contexts/AuthContext';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { GameContext } from './contexts/GameContext';
@@ -38,9 +40,23 @@ function App() {
 		navigate('/catalog');
 	};
 
+	const gameEdit = (gameId, gameData) => {
+		setGames(state => {
+			console.log(state);
+			const gamesWithoutEditedOne = state.filter(g => g._id !== gameId)
+			console.log(gamesWithoutEditedOne);
+			const games = [
+				...gamesWithoutEditedOne,
+				gameData
+			];
+
+			return games;
+		});
+	};
+
 	const gameRemove = (gameId) => {
 		setGames(state => {
-			var gamesWithoutDeleted = state.filter(g => g._id !== gameId)
+			const gamesWithoutDeleted = state.filter(g => g._id !== gameId)
 			return gamesWithoutDeleted;
 		});
 	};
@@ -58,7 +74,7 @@ function App() {
 			<div className="App">
 				<Header />
 
-				<GameContext.Provider value={{ games, gameAdd, gameRemove }}>
+				<GameContext.Provider value={{ games, gameAdd, gameEdit, gameRemove }}>
 					<Routes>
 						<Route path="/" element={<Home games={games} />} />
 						<Route path="/register" element={<Register />} />
@@ -66,6 +82,7 @@ function App() {
 						<Route path="/logout" element={<Logout />} />
 						<Route path="/create" element={<Create />} />
 						<Route path="/games/:gameId" element={<GameById />} />
+						<Route path="/game/edit/:gameId" element={<Edit />} />
 						<Route path="/games/all" element={<All />} />
 					</Routes>
 				</GameContext.Provider>

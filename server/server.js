@@ -1362,7 +1362,7 @@
                 "_createdOn": 1617194295474,
             },
             "676777f5-3347-42ad-b874-76d056b069cb": {
-                "_ownerId": "6cf590a3-5330-431e-b9bc-e4f88e72a799",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "title": "Horizon zero dawn",
                 "category": "Adventure",
                 "price": "400",
@@ -1375,7 +1375,7 @@
                 "title": "Gears of war",
                 "category": "Action",
                 "price": "300",
-                "imageUrl": "https://www.guerrilla-games.com/media/Games/Horizon/horizon-zero-dawn-card-image-v2-768w.jpg?width=1024&height=768&rmode=max&token=rTfdzWvuKaEG7aO5yUx8UtnxUk49k6vVe5w3dL4jsKw%3D",
+                "imageUrl": "https://assets-prd.ignimgs.com/2022/01/07/gears-of-war-1-button-art-1641591565394.jpg",
                 "description": "The game follows protagonist Marcus Fenix, a soldier in the Coalition of Ordered Governments tasked to lead a last-ditch effort to destroy the Locust Horde and save humanity.",
                 "_createdOn": 1617194295474,
             },
@@ -1385,10 +1385,9 @@
                 "category": "Racing",
                 "price": "250",
                 "imageUrl": "https://m.media-amazon.com/images/I/718E3dqa02L.jpg",
-                "description": "The game follows protagonist Marcus Fenix, a soldier in the Coalition of Ordered Governments tasked to lead a last-ditch effort to destroy the Locust Horde and save humanity.",
+                "description": "As with the previous game, Colin McRae Rally 2.0 lets players take part in rallying events set in various special stages across the world, and employs a number of cars featured in the 2000 World Rally Championship, such as the Ford Focus RS WRC and Subaru Impreza GC.",
                 "_createdOn": 1617194295474,
-            },
-
+            }
         },
         comments: {
         
