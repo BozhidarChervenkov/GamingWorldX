@@ -44,9 +44,7 @@ function App() {
 
 	const gameEdit = (gameId, gameData) => {
 		setGames(state => {
-			console.log(state);
 			const gamesWithoutEditedOne = state.filter(g => g._id !== gameId)
-			console.log(gamesWithoutEditedOne);
 			const games = [
 				...gamesWithoutEditedOne,
 				gameData
