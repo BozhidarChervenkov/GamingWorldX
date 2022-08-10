@@ -9,8 +9,8 @@ const All = () => {
 
     useEffect(() => {
         gameService.getAll()
-            .then(result => {
-                setGames(result);
+            .then(games => {
+                setGames(games);
             });
     }, []);
 

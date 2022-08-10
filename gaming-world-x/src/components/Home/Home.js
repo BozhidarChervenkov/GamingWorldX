@@ -19,7 +19,7 @@ const Home = ({ games }) => {
 
             <div className='row ml-5 justify-content-center'>
                 {games.length > 0
-                    ? games.map(g => <GameCard key={g._id} game={g} />)
+                    ? games.sort(g => g._createdOn).slice(0, 4).map(g => <GameCard key={g._id} game={g} />)
                     : <p className="no-articles">No games yet</p>
                 }
             </div>

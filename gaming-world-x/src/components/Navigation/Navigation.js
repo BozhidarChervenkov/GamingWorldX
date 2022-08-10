@@ -23,6 +23,11 @@ const Navigation = () => {
                             All Games
                         </Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/games/categories">
+                            Categories
+                        </Link>
+                    </li>
                     {user.email ?
                         <li className="nav-item">
                             <Link className="nav-link mr-5" to="/create">
