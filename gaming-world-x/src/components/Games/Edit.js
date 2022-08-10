@@ -38,7 +38,7 @@ const Edit = () => {
                 <hr />
 
                 <div className="mb-3">
-                    <label htmlFor="Title" className="form-label">
+                    <label htmlFor="title" className="form-label">
                         Title
                     </label>
                     <input
@@ -50,7 +50,7 @@ const Edit = () => {
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="Description" className="form-label">
+                    <label htmlFor="description" className="form-label">
                         Description
                     </label>
                     <input
@@ -62,7 +62,7 @@ const Edit = () => {
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="Price" className="form-label">
+                    <label htmlFor="price" className="form-label">
                         Price
                     </label>
                     <input
@@ -72,8 +72,9 @@ const Edit = () => {
                         defaultValue={gameToEdit.price}
                     />
                 </div>
+
                 <div className="mb-3">
-                    <label htmlFor="ImageUrl" className="form-label">
+                    <label htmlFor="imageUrl" className="form-label">
                         ImageUrl
                     </label>
                     <input
@@ -84,10 +85,33 @@ const Edit = () => {
                     />
                 </div>
 
-                <hr />
+                <div className="mb-3">
+                    <label htmlFor="videoUrl" className="form-label">
+                        VideoUrl
+                    </label>
+                    <input
+                        type="text"
+                        name="videoUrl"
+                        className="form-control"
+                        defaultValue={gameToEdit.videoUrl}
+                    />
+                </div>
 
-                <button type="submit" className="btn btn-primary mt-5">
-                    Submit
+                <div className="mb-3">
+                    <label htmlFor='category'>Select Category:</label>
+                    <select name='category' id='category' defaultValue={gameToEdit.category}>
+                        <option value='Action'>Action</option>
+                        <option value='Adventure'>Adventure</option>
+                        <option value='Racing'>Racing</option>
+                        <option value='Shooters'>Shooters</option>
+                        <option value='Multiplayer '>Multiplayer</option>
+                        <option value='RPG'>RPG</option>
+                    </select>
+                </div>
+
+                <hr />
+                <button type="submit" className="btn btn-primary mb-5">
+                    Edit game
                 </button>
             </div>
         </form>

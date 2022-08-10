@@ -1337,18 +1337,20 @@
             "ff436770-76c5-40e2-b231-77409eda7a61": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "title": "Star Wars Battlefront II",
-                "category": "Action",
+                "category": "Multiplayer",
                 "price": "80",
                 "imageUrl": "https://media.contentapi.ea.com/content/dam/walrus/en-us/migrated-images/2017/04/reveal-swbf2-fb-meta-image-alt.png.adapt.crop16x9.1023w.png",
+                "videoUrl": "https://www.youtube.com/watch?v=Kae-JjbLsgA&ab_channel=EAStarWars",
                 "description": "Star Wars™ Battlefront™ is the ultimate Star Wars battle experience, brought to life by the creators of Battlefield. Fight in epic Star Wars battles on iconic planets and rise through the ranks playing as the heroic Rebellion or the evil Galactic Empire.",
                 "_createdOn": 1617194128618,
             },
             "1840a313-225c-416a-817a-9954d4609f7c": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "title": "MineCraft",
-                "category": "Arcade",
+                "category": "Multiplayer",
                 "price": "120",
                 "imageUrl": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/12a0ed7c6bc09b73d6558c6f69ed7f5f.png",
+                "videoUrl": "https://www.youtube.com/watch?v=MmB9b5njVbA&ab_channel=Minecraft",
                 "description": "Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for. Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for.",
                 "_createdOn": 1617194210928,
             },
@@ -1358,24 +1360,27 @@
                 "category": "Adventure",
                 "price": "69",
                 "imageUrl": "https://1upinfinite.com/wp-content/uploads/2022/07/VzdYBmqDZ9JaYwakekLRY3.jpg",
+                "videoUrl": "https://www.youtube.com/watch?v=kJawWyRUOBM&ab_channel=GameSpot",
                 "description": "Lost, alone and separated from family, a stray cat must untangle an ancient mystery to escape a long-forgotten city. Stray is a third-person cat adventure game set amidst the detailed, neon-lit alleys of a decaying cybercity and the murky environments of its seedy underbelly.",
                 "_createdOn": 1617194295474,
             },
             "676777f5-3347-42ad-b874-76d056b069cb": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "title": "Horizon zero dawn",
-                "category": "Adventure",
+                "category": "Action",
                 "price": "400",
                 "imageUrl": "https://www.guerrilla-games.com/media/Games/Horizon/horizon-zero-dawn-card-image-v2-768w.jpg?width=1024&height=768&rmode=max&token=rTfdzWvuKaEG7aO5yUx8UtnxUk49k6vVe5w3dL4jsKw%3D",
+                "videoUrl": "https://www.youtube.com/watch?v=u4-FCsiF5x4&ab_channel=PlayStation",
                 "description": "Horizon Zero Dawn is a 2017 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment. The plot follows Aloy, a young huntress in a world overrun by machines, who sets out to uncover her past.",
                 "_createdOn": 1617194295474,
             },
             "985777f5-3347-42ad-b874-76d056b069cb": {
                 "_ownerId": "6cf590a3-5330-431e-b9bc-e4f88e72a799",
                 "title": "Gears of war",
-                "category": "Action",
+                "category": "RPG",
                 "price": "300",
                 "imageUrl": "https://assets-prd.ignimgs.com/2022/01/07/gears-of-war-1-button-art-1641591565394.jpg",
+                "videoUrl": "https://www.youtube.com/watch?v=wy8LRlS1SCc&ab_channel=IGN",
                 "description": "The game follows protagonist Marcus Fenix, a soldier in the Coalition of Ordered Governments tasked to lead a last-ditch effort to destroy the Locust Horde and save humanity.",
                 "_createdOn": 1617194295474,
             },
@@ -1385,12 +1390,13 @@
                 "category": "Racing",
                 "price": "250",
                 "imageUrl": "https://m.media-amazon.com/images/I/718E3dqa02L.jpg",
+                "videoUrl": "https://www.youtube.com/watch?v=zi6WRi97EZY&ab_channel=JANSSEN1929",
                 "description": "As with the previous game, Colin McRae Rally 2.0 lets players take part in rallying events set in various special stages across the world, and employs a number of cars featured in the 2000 World Rally Championship, such as the Ford Focus RS WRC and Subaru Impreza GC.",
                 "_createdOn": 1617194295474,
             }
         },
         comments: {
-        
+
         }
     };
     var rules$1 = {
