@@ -47,7 +47,7 @@ const Create = () => {
         }));
     };
 
-    const isFormValid = !Object.values(errors).some(x => x)
+    const isFormValid = !Object.values(errors).some(x => x);
 
     // Main logic:
     const navigate = useNavigate();

@@ -36,6 +36,8 @@ const Register = () => {
         }));
     };
 
+    const isFormValid = !Object.values(errors).some(x => x);
+
     // Main logic:
     const { userLogin } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -111,7 +113,7 @@ const Register = () => {
 
                 <hr />
 
-                <button type="submit" className="btn btn-primary mt-5">
+                <button type="submit" className="btn btn-primary mt-5" disabled={!isFormValid || (fieldValues.email === '' || fieldValues.password==='' || fieldValues.confirmPassword == '') || fieldValues.password !== fieldValues.confirmPassword}>
                     Register
                 </button>
             </div>
