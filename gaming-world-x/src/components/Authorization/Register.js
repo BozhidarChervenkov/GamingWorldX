@@ -113,7 +113,7 @@ const Register = () => {
 
                 <hr />
 
-                <button type="submit" className="btn btn-primary mt-5" disabled={!isFormValid || (fieldValues.email === '' || fieldValues.password==='' || fieldValues.confirmPassword == '') || fieldValues.password !== fieldValues.confirmPassword}>
+                <button type="submit" className="btn btn-primary mt-5" disabled={!isFormValid || (fieldValues.email === '' || fieldValues.password === '' || fieldValues.confirmPassword === '') || fieldValues.password !== fieldValues.confirmPassword}>
                     Register
                 </button>
             </div>
