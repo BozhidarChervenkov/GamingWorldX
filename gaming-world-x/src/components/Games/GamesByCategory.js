@@ -12,9 +12,13 @@ const GamesByCategory = () => {
     const gamesByCategory = games.filter(g => g.category.toLowerCase() === categoryType);
 
     return (
-        gamesByCategory.length > 0
-            ? gamesByCategory.map(g => <GameListItem key={g._id} game={g} />)
-            : <h1 className='mt-5'>No games available in this game category!</h1>
+        <>
+            <hr />
+            
+            {gamesByCategory.length > 0
+                ? gamesByCategory.map(g => <GameListItem key={g._id} game={g} />)
+                : <h1 className='mt-5'>No games available in this game category!</h1>}
+        </>
     );
 };
 
