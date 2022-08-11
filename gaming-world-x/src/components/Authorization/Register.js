@@ -1,17 +1,49 @@
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import * as authService from '../../services/authService';
 import { AuthContext } from '../../contexts/AuthContext';
+import isEmail from 'validator/lib/isURL';
 
 const Register = () => {
+    // Validation:
+    const [errors, setErrors] = useState({});
+    const [fieldValues, setFieldValues] = useState({
+        email: '',
+        password: '',
+        confirmPassword: '',
+    });
+
+    const changeValidationHandler = (e) => {
+        setFieldValues(state => ({
+            ...state,
+            [e.target.name]: e.target.value
+        }));
+    };
+
+    const minLength = (e, bound) => {
+        setErrors(state => ({
+            ...state,
+            [e.target.name]: fieldValues[e.target.name].length < bound,
+        }));
+    };
+
+    const validateIsEmail = (e) => {
+        let input = e.target.value;
+        setErrors(state => ({
+            ...state,
+            [e.target.name]: !isEmail(input),
+        }));
+    };
+
+    // Main logic:
     const { userLogin } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        const { email, password, confirmPassword } = Object.fromEntries(new FormData(e.target));
+        const { email, password, confirmPassword } = fieldValues;
 
         if (password !== confirmPassword) {
             return;
@@ -40,7 +72,11 @@ const Register = () => {
                         type="email"
                         name="email"
                         className="form-control"
+                        value={fieldValues.email} onChange={changeValidationHandler} onBlur={validateIsEmail}
                     />
+                    {errors.email &&
+                        <p className="form-error">Email should be valid!</p>
+                    }
                 </div>
 
                 <div className="mb-3">
@@ -51,7 +87,11 @@ const Register = () => {
                         type="password"
                         name="password"
                         className="form-control"
+                        value={fieldValues.password} onChange={changeValidationHandler} onBlur={(e) => minLength(e, 6)}
                     />
+                    {errors.password &&
+                        <p className="form-error">Password should be at least 6 characters long!</p>
+                    }
                 </div>
 
                 <div className="mb-3">
@@ -62,7 +102,11 @@ const Register = () => {
                         type="password"
                         name="confirmPassword"
                         className="form-control"
+                        value={fieldValues.confirmPassword} onChange={changeValidationHandler} onBlur={(e) => minLength(e, 6)}
                     />
+                    {errors.confirmPassword &&
+                        <p className="form-error">Confirm password should be at least 6 characters long!</p>
+                    }
                 </div>
 
                 <hr />

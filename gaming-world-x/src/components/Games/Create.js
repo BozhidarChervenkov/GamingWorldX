@@ -29,7 +29,7 @@ const Create = () => {
             ...state,
             [e.target.name]: fieldValues[e.target.name].length < bound,
         }));
-    }
+    };
 
     const isPositive = (e) => {
         let number = Number(e.target.value);
@@ -40,10 +40,10 @@ const Create = () => {
     }
 
     const validateWebsiteUrl = (e) => {
-        let url = e.target.value;
+        let input = e.target.value;
         setErrors(state => ({
             ...state,
-            [e.target.name]: !isURL(url),
+            [e.target.name]: !isURL(input),
         }));
     };
 

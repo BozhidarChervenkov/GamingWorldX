@@ -15,8 +15,7 @@ const GameById = () => {
 
     const game = games.find(g => g._id === gameId) || {};
     const isAuthor = game._ownerId === user._id;
-    console.log(game.videoUrl);
-
+    
     const gameDeleteHandler = () => {
         gameService.delGame(gameId)
             .then(() => {
