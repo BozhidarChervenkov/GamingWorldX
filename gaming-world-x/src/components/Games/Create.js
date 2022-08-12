@@ -162,7 +162,7 @@ const Create = () => {
 
                 <hr />
 
-                <button type="submit" className="btn btn-primary mb-5" disabled={!isFormValid}>
+                <button type="submit" className="btn btn-primary mb-5" disabled={!isFormValid || (fieldValues.title ==='' || fieldValues.description ==='' || fieldValues.price==='' || fieldValues.imageUrl ==='' || fieldValues.videoUrl ==='')}>
                     Add Game
                 </button>
             </div>
