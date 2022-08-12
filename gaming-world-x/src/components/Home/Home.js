@@ -10,7 +10,7 @@ const Home = ({ games }) => {
             <hr />
 
             <div>
-                <img src="https://greyring.com/wp-content/uploads/2021/09/future-gaming.jpg" width={800} height={100} className="img-fluid mt-1" alt="gamingImage" />
+                <img src="https://greyring.com/wp-content/uploads/2021/09/future-gaming.jpg" width={800} height={100} className="img-fluid mt-1 rounded" alt="gamingImage" />
             </div>
 
             <hr />

@@ -46,8 +46,6 @@ const Login = () => {
 
         const { email, password } = fieldValues;
 
-        console.log(email,password);
-
         authService.login(email, password)
             .then(authData => {
                 userLogin(authData);

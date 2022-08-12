@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 
 import GameListItem from './GameListItem';
+import Pagination from '../Pagination/Pagination';
 import * as gameService from '../../services/gameService';
 
 const All = () => {
     const [games, setGames] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
+    const [gamesPerPage] = useState(2);
 
     useEffect(() => {
         gameService.getAll()
@@ -13,6 +16,15 @@ const All = () => {
                 setGames(games);
             });
     }, []);
+
+
+    // Get current games(pagination)
+    const indexOfLastGame = currentPage * gamesPerPage;
+    const indexOfFirstGame = indexOfLastGame - gamesPerPage;
+    const currentGames = games.slice(indexOfFirstGame, indexOfLastGame);
+
+    // Change page logic
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
         <>
@@ -32,8 +44,8 @@ const All = () => {
 
             <hr />
 
-            {games.length > 0
-                ? games.filter((game) => {
+            {currentGames.length > 0
+                ? currentGames.filter((game) => {
                     if (searchTerm === '') {
                         return game;
                     } else if (game.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
@@ -43,6 +55,8 @@ const All = () => {
                 }).map(g => <GameListItem key={g._id} game={g} />)
                 : <p>No games available!</p>
             }
+
+            <Pagination gamesPerPage={gamesPerPage} totalGames={games.length} paginate={paginate} />
 
             <hr />
         </>
